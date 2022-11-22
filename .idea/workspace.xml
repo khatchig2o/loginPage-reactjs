@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96be222f-bcfb-4484-a163-816f18f8ba3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/page/Register/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/admin/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/admin/users/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/login/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/users/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HosKMVbapTBqGOzVde2LzBIFiS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.1.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96be222f-bcfb-4484-a163-816f18f8ba3d" name="Changes" comment="" />
+      <created>1668962708409</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668962708409</updated>
+      <workItem from="1668962711508" duration="351000" />
+      <workItem from="1668963108010" duration="313000" />
+      <workItem from="1668963439446" duration="239000" />
+      <workItem from="1668963699869" duration="225000" />
+      <workItem from="1668981790360" duration="946000" />
+      <workItem from="1668988893715" duration="914000" />
+      <workItem from="1668995934026" duration="1124000" />
+      <workItem from="1669050995949" duration="1106000" />
+      <workItem from="1669058401020" duration="634000" />
+      <workItem from="1669066245563" duration="716000" />
+      <workItem from="1669095199613" duration="16739000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
