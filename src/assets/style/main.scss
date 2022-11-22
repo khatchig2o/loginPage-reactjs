@@ -19,6 +19,12 @@ body {
     padding: 10px 0;
     height: 60px;
   }
+  p{
+    color: #1A1A1D;
+  }
+  .P-error-text{
+    color: red;
+  }
 }
 
 .P-lastname{
@@ -35,7 +41,8 @@ body {
 .P-login-form{
   text-align: center;
   input{
-    background-color: gray;
+    background-color: white;
+    border: 2px solid black;
   }
 }
 

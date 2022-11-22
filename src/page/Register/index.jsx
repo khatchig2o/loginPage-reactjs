@@ -3,55 +3,88 @@ import {Link} from "react-router-dom";
 
 export  default  class Register extends React.Component{
     state={
-        firstName : "".trim(),
-        lastName : "".trim(),
-        password : "".trim(),
-        email : "".trim(),
-        areaCod : "".trim(),
-        number : "".trim(),
+        go : false,
+        firstName : "",
+        lastName : "",
+        password : "",
+        email : "",
+        areaCod : "",
+        number : "",
         registerUser : {},
         arr : [],
         double : false,
         x :[],
-        go : false
+        errorfname:"",
+        errorLname:'',
+        errorpassword : "",
+        erroremail : "",
+        errorareacod :'',
+        errornumber :'',
+        canLogin : false
     }
     Handelinputs=(e)=>{
         this.setState({[e.target.name] : e.target.value})
     }
     onclick=()=>{
-        let canLogin = false
-        if (this.state.firstName.length){
-            canLogin = false
+
+        if (this.state.firstName.trim().length){
+            this.setState({canLogin : true})
+            this.setState({errorfname : ""})
         }else{
-            canLogin = false
-        }
-        if (this.state.lastName.length){
-            canLogin = false
-        }else{
-            canLogin = false
-        }
-        if (this.state.password.length){
-            canLogin = false
-        }else{
-            canLogin = false
-        }
-        if (this.state.areaCod.length){
-            canLogin = false
-        }else{
-            canLogin = false
-        }
-        if (this.state.number.length){
-            canLogin = false
-        }else{
-            canLogin = false
-        }
-        if(this.state.email.length && this.ValidateEmail(this.state.email)){
-            canLogin =true
-        }else {
-            canLogin =false
+            this.setState({canLogin : false})
+
+            this.setState({errorfname : "pleas fill the first name"})
+
         }
 
-        if(canLogin){
+        if (this.state.lastName.trim().length){
+            this.setState({canLogin : true})
+            this.setState({errorLname : ""})
+        }else{
+            this.setState({canLogin : false})
+            this.setState({errorLname : "pleas fill the last name"})
+        }
+
+        if (this.state.password.trim().length){
+            this.setState({canLogin : true})
+            this.setState({errorpassword : ""})
+        }else{
+            this.setState({canLogin : false})
+            this.setState({errorpassword : "pleas fill the password"})
+        }
+
+        if (this.state.areaCod.trim().length){
+            this.setState({canLogin : true})
+            this.setState({errorareacod : ""})
+        }else{
+            this.setState({canLogin : false})
+            this.setState({errorareacod : "pleas fill the areaCod"})
+        }
+
+        if (this.state.number.trim().length){
+            this.setState({canLogin : true})
+            this.setState({errornumber : ""})
+        }else{
+            this.setState({canLogin : false})
+            this.setState({errornumber : "pleas fill the number"})
+        }
+
+        if(this.state.email.trim().length){
+            if(this.state.email.length && this.ValidateEmail(this.state.email)){
+                this.setState({canLogin : true})
+                this.setState({erroremail : ""})
+            }else {
+                this.setState({canLogin : false})
+                this.setState({erroremail : "pleas fill a valid email"})
+            }
+        }else {
+            this.setState({canLogin : false})
+            this.setState({erroremail : "pleas fill  the email"})
+        }
+
+
+
+        if(this.state.canLogin){
             this.clear()
             this.setState({ registerUser: {
                 firstName: this.state.firstName, lastName: this.state.lastName, Email: this.state.email, password: this.state.password, phone : this.state.areaCod + this.state.number
@@ -94,16 +127,17 @@ export  default  class Register extends React.Component{
 
     clear=()=>{
         this.setState({
-            firstName : "".trim(),
-            lastName : "".trim(),
-            password : "".trim(),
-            email : "".trim(),
-            areaCod : "".trim(),
-            number : "".trim(),
+            firstName : "",
+            lastName : "",
+            password : "",
+            email : "",
+            areaCod : "",
+            number : "",
             registerUser : {},
             arr : [],
             double : false,
-            x :[]
+            x :[],
+            go : true
         })
     }
 
@@ -118,35 +152,40 @@ export  default  class Register extends React.Component{
                 <div className="G-input-filed">
                     <h2>Name</h2>
                     <label>
-                        <input type="text" value={this.state.firstName} name="firstName" onChange={this.Handelinputs} />
+                        <input type="text" value={this.state.firstName} name="firstName" onChange={this.Handelinputs} className={ this.state.errorfname ? 'G-error': ''} />
                         <p>first name</p>
+                        {this.state.errorfname ? <p className="P-error-text">{this.state.errorfname}</p> : null}
                     </label>
                     <label>
-                        <input type="text" className='P-lastname'  value={this.state.lastName} name="lastName" onChange={this.Handelinputs} />
+                        <input type="text" className='P-lastname'  value={this.state.lastName} name="lastName" onChange={this.Handelinputs} className={ this.state.errorLname ? 'G-error': ''} />
                         <p>Last name</p>
+                        {this.state.errorLname ? <p className="P-error-text">{this.state.errorLname}</p> : null}
                     </label>
                 </div>
                 <div className="G-input-filed">
                     <h2>Password</h2>
                     <label>
-                        <input type="password" value={this.state.password} name='password' onChange={this.Handelinputs}/>
+                        <input type="password" value={this.state.password} name='password' onChange={this.Handelinputs} className={ this.state.errorpassword ? 'G-error': ''}/>
+                        {this.state.errorpassword ? <p className="P-error-text">{this.state.errorpassword}</p> : null}
                     </label>
                 </div>
                 <div className="G-input-filed">
                     <h2>Email</h2>
                     <label>
-                        <input type="email" value={this.state.email} name='email' onChange={this.Handelinputs}/>
+                        <input type="email" value={this.state.email} name='email' onChange={this.Handelinputs} className={ this.state.erroremail ? 'G-error': ''}/>
+                        {this.state.erroremail ? <p className="P-error-text">{this.state.erroremail}</p> : null}
                     </label>
                 </div>
                 <div className="G-input-filed">
                     <h2>Phone</h2>
                     <label>
-                        <input type="number" value={this.state.areaCod} name='areaCod' onChange={this.Handelinputs}/>
-                        <p> name</p>
+                        <input type="number" value={this.state.areaCod} name='areaCod' onChange={this.Handelinputs } className={ this.state.errornumber ? 'G-error': ''}/>
+                        <p> areaCod</p>
+                        {this.state.errornumber ? <p className="P-error-text">{this.state.errornumber}</p> : null}
                     </label>
                     <label>
-                        <input type="number" value={this.state.number} name='number' onChange={this.Handelinputs}/>
-                        <p> name</p>
+                        <input type="number" value={this.state.number} name='number' onChange={this.Handelinputs } className={ this.state.errornumber ? 'G-error': ''}/>
+                        <p> number</p>
                     </label>
                 </div>
                 <button className="G-buttons" type="button" onClick={this.onclick}>submit</button>
